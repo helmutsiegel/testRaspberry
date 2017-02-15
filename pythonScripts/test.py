@@ -15,9 +15,8 @@ print("Here we go! Press CTRL+C to exit")
 try:
     while 1:
             GPIO.output(ledPin, GPIO.HIGH)
-            time.sleep(0.075)
+            time.sleep(0.5)
             GPIO.output(ledPin, GPIO.LOW)
-            time.sleep(0.075)
+            time.sleep(0.5)
 except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
-    pwm.stop() # stop PWM
     GPIO.cleanup() # cleanup all GPIO
